@@ -82,7 +82,7 @@ def fix_goal():
     init_goal_msg.goal.target_pose.pose.position.y = input_y
     init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 
-    # publishing message about and geting the time of reaching
+    # publishing message and geting the time of reaching
     pub_goal.publish(init_goal_msg)
     start_time = rospy.Time.now() #line 104
 
