@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<launch>
+    
+    <!-- Include launch files procited by the professor-->
+    <include file="$(find final_assignment)/launch/simulation_gmapping.launch"/>
+    <include file="$(find final_assignment)/launch/move_base.launch"/>
+    
+    <!-- Run the menu node developed in this assignment-->
+    <node pkg="final_assignment" type="menu.py" name="menu" output="screen" required="true" launch-prefix="xterm -e"/>
+    
+    <!-- Run the teleop_twist_keyboard node -->
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen" launch-prefix="xterm -e">
+    
+    <!-- Remap the teleop_twist_keyboard topic -->
+    <remap from="cmd_vel" to="input_cmd_vel"/>
+    
+    </node>
+</launch>
