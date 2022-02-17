@@ -310,7 +310,7 @@ def choose_driving_mode(user_input):
 
     # to cancel car position 
     elif user_input == 4:
-    	finish_process()
+    	cancel_process()
     	print('user cancelled the goal')
     
     # to reset car position
