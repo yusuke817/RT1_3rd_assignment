@@ -45,17 +45,17 @@ $ git clone git@github.com:yusuke817/RT1_3rd_assignment.git
 
 2. Installing the package needed
 
-You install teleop twist keyboard package for driving a car manualy based on user input.
+You should install teleop twist keyboard package for driving a car manualy based on user input.
 
 ```
 $ sudo apt-get install ros-noetic-teleop-twist-keyboard
 ```
-You install xterm package to show the menu for users.
+You should install xterm package to show the menu for users.
 
 ```
 $ sudo apt-get install xterm
 ```
-You install ros navigation stack.
+You should install ros navigation stack.
 
 ```
 $ sudo apt-get install ros-noetic-navigation
