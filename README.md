@@ -223,7 +223,8 @@ There is only one main function in interaction.cpp. There are three main process
 
 # rqt-graph
 I made the folder called "second_assignment." I show you the realationships between the nodes in rqt-graph. Driving node sends the commands on the velocity to stageros node. Also, driving node can get the updated velocity based on user input from speed server node with the speed.srv.
-<img width="1382" alt="RT2_rqt" src="https://user-images.githubusercontent.com/46062824/146010312-9e4327dd-0b36-4c1c-b1f4-5632a9c72ed9.png">
+
+<img width="1388" alt="スクリーンショット 2022-02-18 16 28 46" src="https://user-images.githubusercontent.com/46062824/154717283-b54d1e93-939c-4b1c-a81b-fc4a26d259b2.png">
 
 # Result on YouTube
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
