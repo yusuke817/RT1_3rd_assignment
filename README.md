@@ -15,10 +15,8 @@ The simulation with Rviz is shown in the right side.
 The simulation with Gazebo is shown in the right side.
 <img width="320" alt="スクリーンショット 2022-02-18 22 08 10" src="https://user-images.githubusercontent.com/46062824/154762042-a9061a43-5ea8-488f-8271-37bfe2296559.png">
 
-# Explanation about the situation and implementation
-The blue dot in the circuit is the robot controlled in this assignment.
-<br>
-There are two nodes I developped: driving_node in control.cpp and speed_server_node in interaction.cpp.
+# Overview of the implementation
+There are two nodes in my code: driving_node in control.cpp and speed_server_node in interaction.cpp.
 <br>
 1. Driving_node is developped for controlling the movement of the robot.
 2. Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
