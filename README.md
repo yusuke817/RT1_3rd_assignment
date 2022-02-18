@@ -30,10 +30,34 @@ The flowchart of the program is shown below.
 ![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
 
 # How to execute
-The program can be run with 4 terminals shown below: main, stage_ros, the one for driving_node and the one for speed_server_node.
-<img width="1402" alt="terminal×4" src="https://user-images.githubusercontent.com/46062824/146006462-8eb17c5e-ea8a-4541-b6eb-e9bb1c22b2a5.png">
+The program can be run in the terminal.
 <br>
-1. Preparation
+0. Installing the repository I developed
+
+You should install the repository I developed.
+
+```
+$ sudo apt-get install ros-noetic-teleop-twist-keyboard
+```
+
+1. Installing the package needed
+
+You install teleop twist keyboard package for driving a car manualy based on user input.
+
+```
+$ sudo apt-get install ros-noetic-teleop-twist-keyboard
+```
+You install xterm package to show the menu for users.
+
+```
+$ sudo apt-get install xterm
+```
+You install ros navigation stack.
+
+```
+$ sudo apt-get install ros-noetic-navigation
+```
+2. Preparation
 
 You should run ros itself and compile the program.
 
