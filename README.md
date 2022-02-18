@@ -5,8 +5,11 @@ I created final_assignment package in order to learn how to use ROS, Rviz and Ga
 
 # Tasks
 With Rviz and Gazebo, the robot (car) should execute one of the following behaviors.
+<br>
 ①Autonomously reach a x,y coordinate inserted by the user
+<br>
 ②Let the user drive the robot with the keyboard
+<br>
 ③Let the user drive the robot assisting them to avoid collisions
 <br>
 The simulation with Rviz is shown in the right side.
@@ -67,7 +70,7 @@ catkin_make
 ```
 4. Running the program
 
-You should run the launch file.
+You should run the launch file including simulation_gmapping.launch, move_base.launch, menu node and teleop node. These two nodes are developed and introduced by me.
 
 ```
 $ roslaunch final_assignment final_assignment.launch
