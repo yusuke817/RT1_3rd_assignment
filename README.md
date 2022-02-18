@@ -65,20 +65,12 @@ You should run ros itself and compile the program.
 roscore &
 catkin_make
 ```
-4. Running
+4. Running the program
 
-You should run the program with 3 nodes in each terminals respectively.
-
-```
-rosrun stage_ros stageros $(rospack find second_assignment)/world/my_world.world
-```
+You should run the launch file.
 
 ```
-rosrun second_assignment driving_node
-```
-
-```
-rosrun second_assignment speed_server_node
+$ roslaunch final_assignment final_assignment.launch
 ```
 
 # The expalanation about each nodes for operation
