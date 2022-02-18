@@ -1,26 +1,17 @@
 # RT1_3rd_assignment
 
 # Purpose and Summary
-I created second_assignment package in order to learn how to use ROS expecially in Pub/Sub communications and services.
-
-# Functions
-1. menu_ui for users to select the mode
-2. check_user_input for accepting the effective user input about selecting the mode
-3. print_goal for outputting the goal
-4. set_goal for deciding the coordinate -> check the destination is reachable or not
-5. get_goal for storing the goal
-6. goal_reached for checking whether reached or not 
-7. cancel_goal for cancelling
-8. manual_driving
-9. assisted_driving
-10. set_user_vel
-11. choose_driving_mode
-12. main
+I created final_assignment package in order to learn how to use ROS, Rviz and Gazebo. 
 
 # Tasks
-①Robot can drive in the circuit automatically without crashing on the walls.
-<br>
-②An user can change the speed of the robot.
+With Rviz and Gazebo, the robot (car) should execute one of the following behaviors.
+①Autonomously reach a x,y coordinate inserted by the user
+②Let the user drive the robot with the keyboard
+③Let the user drive the robot assisting them to avoid collisions
+The simulation with Rviz is shown below.
+<img width="269" alt="スクリーンショット 2022-02-18 22 09 54" src="https://user-images.githubusercontent.com/46062824/154762003-3c30aa98-d4f2-421a-b5b6-a0d04b45f81b.png">
+The simulation with Gazebo is shown below.
+<img width="320" alt="スクリーンショット 2022-02-18 22 08 10" src="https://user-images.githubusercontent.com/46062824/154762042-a9061a43-5ea8-488f-8271-37bfe2296559.png">
 
 # Explanation about the situation and implementation
 The blue dot in the circuit is the robot controlled in this assignment.
@@ -233,3 +224,18 @@ Result is shown in the video below. I recommend you that you should change the r
 
 # Future work
 In this assignment, I set the limitation of the robot since the robot will crash against the wall when the speed is too big. With PID control, the quality of control will improve and robot will drive faster than now.
+
+
+# Functions
+1. menu_ui for users to select the mode
+2. check_user_input for accepting the effective user input about selecting the mode
+3. print_goal for outputting the goal
+4. set_goal for deciding the coordinate -> check the destination is reachable or not
+5. get_goal for storing the goal
+6. goal_reached for checking whether reached or not 
+7. cancel_goal for cancelling
+8. manual_driving
+9. assisted_driving
+10. set_user_vel
+11. choose_driving_mode
+12. main
