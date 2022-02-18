@@ -10,6 +10,7 @@ With Rviz and Gazebo, the robot (car) should execute one of the following behavi
 ③Let the user drive the robot assisting them to avoid collisions
 The simulation with Rviz is shown below.
 <img width="269" alt="スクリーンショット 2022-02-18 22 09 54" src="https://user-images.githubusercontent.com/46062824/154762003-3c30aa98-d4f2-421a-b5b6-a0d04b45f81b.png">
+<br>
 The simulation with Gazebo is shown below.
 <img width="320" alt="スクリーンショット 2022-02-18 22 08 10" src="https://user-images.githubusercontent.com/46062824/154762042-a9061a43-5ea8-488f-8271-37bfe2296559.png">
 
