@@ -19,9 +19,9 @@ The simulation with Gazebo is shown in the right side.
 <img width="320" alt="スクリーンショット 2022-02-18 22 08 10" src="https://user-images.githubusercontent.com/46062824/154762042-a9061a43-5ea8-488f-8271-37bfe2296559.png">
 
 # Overview of the implementation
-There are two nodes in my code: driving_node in control.cpp and speed_server_node in interaction.cpp.
+There are two nodes I added to the repository provided the professor: "menu" in menu.py and "tele_op" in teleop_twist_keyboard.py.
 <br>
-1. Driving_node is developped for controlling the movement of the robot.
+1. "menu" node is developped for selecting the driving mode 
 2. Speed_server_node is developped for changing the speed of the robot and resetting the position of the robot depending on the user inputs.
 
 <img width="772" alt="ros_stage" src="https://user-images.githubusercontent.com/46062824/145958992-266706c8-2900-4d03-b4f2-cdf08531265c.png">
@@ -232,7 +232,7 @@ There is only one main function in interaction.cpp. There are three main process
 ```
 
 # rqt-graph
-I made the folder called "final_assignment." I show you the realationships between the nodes in rqt-graph. Driving node sends the commands on the velocity to stageros node. Also, driving node can get the updated velocity based on user input from speed server node with the speed.srv.
+I made the folder called "final_assignment." I show you the realationships between the nodes in rqt-graph. 
 
 <img width="1388" alt="スクリーンショット 2022-02-18 16 28 46" src="https://user-images.githubusercontent.com/46062824/154717283-b54d1e93-939c-4b1c-a81b-fc4a26d259b2.png">
 
