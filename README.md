@@ -32,15 +32,15 @@ The flowchart of the program is shown below.
 # How to execute
 The program can be run in the terminal.
 <br>
-0. Installing the repository I developed
+1. Installing the repository I developed
 
 You should install the repository I developed.
 
 ```
-$ sudo apt-get install ros-noetic-teleop-twist-keyboard
+$ git clone git@github.com:yusuke817/RT1_3rd_assignment.git
 ```
 
-1. Installing the package needed
+2. Installing the package needed
 
 You install teleop twist keyboard package for driving a car manualy based on user input.
 
@@ -57,7 +57,7 @@ You install ros navigation stack.
 ```
 $ sudo apt-get install ros-noetic-navigation
 ```
-2. Preparation
+3. Preparation
 
 You should run ros itself and compile the program.
 
@@ -65,7 +65,7 @@ You should run ros itself and compile the program.
 roscore &
 catkin_make
 ```
-2. Running
+4. Running
 
 You should run the program with 3 nodes in each terminals respectively.
 
