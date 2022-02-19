@@ -118,7 +118,7 @@ $ roslaunch final_assignment final_assignment.launch
  12. choose_driving_mode: user can choose the driving mode
  13. main: Initialization, settings about pub/sub and running
 
-# The expalanation about each nodes for operation
+# The expalanation about each driving modes
 
 1. "driving_node" in control.cpp.
 
