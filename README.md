@@ -35,6 +35,14 @@ There are two nodes I added to the repository provided the professor: "menu" in 
 
 ## "menu" node
 ### input
+- リスト1
+    - ネスト リスト1_1
+        - ネスト リスト1_1_1
+        - ネスト リスト1_1_2
+- リスト1
+    - ネスト リスト1_1
+        - ネスト リスト1_1_1
+        - ネスト リスト1_1_2
 - user input from menu.py screen
 There are several types of user inputs accepted to this node
 	a. driving mode: "1: Auto_drive mode, 2: Manual_drive mode, 3: Assisted_drive mode, 4: Cancel the goal, 5: Reset car position, 0: Exit"
