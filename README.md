@@ -282,5 +282,6 @@ Result is shown in the video below. I recommend you that you should change the r
 A car should 
  1. calculate the time of reaching the destination beforehand
  2. register several destinations and move consequently
+<br>
 The reasons are as follows.
 Let's think about the real application. A car moves in the warehouse to carry and put items to the several shelves. In auto driving mode, a car should calculate the time of reaching the destination beforehand not only to check whether or not it is reachable but also to check the amount of consumed fuel. If fuel is not enough to head another destination, it should move back to the starting point to charge the energy. Also, a car should move to the several places until the fuel runs out, I should make a car register several destinations and move consequently. 
