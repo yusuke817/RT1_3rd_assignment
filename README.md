@@ -46,9 +46,14 @@ There are two nodes I added to the repository provided the professor: "menu" in 
     - b. goal coordinates in 1: Auto_drive mode
     - c. command for going back to the menu: if you would like to finish the mode in 2: Manual_drive mode, 3: Assisted_drive mode, you should push p.
 - "input_cmd_vel" topic from teleop node
+<br>
 In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive mode, 3: Assisted_drive mode, "menu" node receives input_cmd_vel" topic and modifies the velocity depending on the situation related to obstacles around a car.
 - "input_cmd_vel" topic from teleop node
+<br>
+In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive mode, 3: Assisted_drive mode, "menu" node receives input_cmd_vel" topic and modifies the velocity depending on the situation related to obstacles around a car.
 - "input_cmd_vel" topic from teleop node
+<br>
+In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive mode, 3: Assisted_drive mode, "menu" node receives input_cmd_vel" topic and modifies the velocity depending on the situation related to obstacles around a car.
     - ネスト リスト1_1
         - ネスト リスト1_1_1
         - ネスト リスト1_1_2
