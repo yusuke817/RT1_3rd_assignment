@@ -21,7 +21,7 @@ The simulation with Gazebo is shown in the right side.
 # Menu and Flowchart
 The user menu is shown below.
 <br>
-<img width="690" alt="スクリーンショット 2022-02-19 11 49 15" src="https://user-images.githubusercontent.com/46062824/154797760-4f3cc29e-8640-4c29-8883-e4b961a44fc7.png">
+<img width="490" alt="スクリーンショット 2022-02-19 11 49 15" src="https://user-images.githubusercontent.com/46062824/154797760-4f3cc29e-8640-4c29-8883-e4b961a44fc7.png">
 
 The flowchart of the program is shown below.
 <br>
