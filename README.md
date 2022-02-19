@@ -121,7 +121,7 @@ $ roslaunch final_assignment final_assignment.launch
 # The expalanation about each driving modes
 Please read the comments in the codes if you would like to know the details of the implementation. Here, I explain the important part briefly.
 ## auto drive mode
-Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
+Navigation stack enables a car to reach the destination which user decides with collision avoidance. The "menu" node defined in menu.py receives goal coordinates and send them to move_base.
 
 ```
 # accepting the goal coordinate user wants
@@ -138,21 +138,16 @@ init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 ```
 ## manual mode
-Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
+
 
 ```
-# accepting the goal coordinate user wants
-input_x = float(input('\nCould you type the x-coordinate for the goal?: '))
-input_y = float(input('\nCould you type the y-coordinate for the goal?: '))
+# cmd_vel is remapped on input_cmd_vel in launch file
+<node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen" launch-prefix="xterm -e">
+<remap from="cmd_vel" to="input_cmd_vel"/>
+```
 
-# initializing goal coordinate given by user
-init_goal_msg = MoveBaseActionGoal()
-	
-# send a goal to the robot to move to the destination
-init_goal_msg.goal.target_pose.header.frame_id = "map"
-init_goal_msg.goal.target_pose.pose.position.x = input_x
-init_goal_msg.goal.target_pose.pose.position.y = input_y
-init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
+```	
+sub_vel = rospy.Subscriber('/input_cmd_vel', Twist, actual_vel) # getting velocity  
 ```
 
 ## assisted mode
