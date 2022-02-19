@@ -171,6 +171,7 @@ init_goal_msg.goal.target_pose.header.frame_id = "map"
 init_goal_msg.goal.target_pose.pose.position.x = input_x
 init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0  
+```
 
 # Result on YouTube
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
