@@ -138,15 +138,15 @@ init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 ```
 ## manual mode
-
-
+I introduced teleop_twist_keyboard.py for user to maneuver the car. The velocity is remapped on input_cmd_vel topic and menu node subscribes.
 ```
 # cmd_vel is remapped on input_cmd_vel in launch file
 <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen" launch-prefix="xterm -e">
 <remap from="cmd_vel" to="input_cmd_vel"/>
 ```
 
-```	
+```
+# menu node subscribes input_cmd_vel in menu.py
 sub_vel = rospy.Subscriber('/input_cmd_vel', Twist, actual_vel) # getting velocity  
 ```
 
