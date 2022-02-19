@@ -138,7 +138,15 @@ init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 ```
 ## manual mode
-I introduced teleop_twist_keyboard.py for user to maneuver the car. The velocity is remapped on input_cmd_vel topic and menu node subscribes.
+I introduced teleop_twist_keyboard.py for user to maneuver the car. Commands defined in teleop keyboard are shown below. A car can move forward or backward when user pushes i or ",". A car can stay when user pushes k. A car can rotate in counter-clockwise direction or in clockwise direction when user pushes j or l.
+```
+    # moving around (commands)
+    # u i o
+    # j k l
+    # m , .
+```
+
+The velocity is remapped on input_cmd_vel topic and menu node subscribes.
 ```
 # cmd_vel is remapped on input_cmd_vel in launch file
 <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="teleop" output="screen" launch-prefix="xterm -e">
@@ -151,7 +159,7 @@ sub_vel = rospy.Subscriber('/input_cmd_vel', Twist, actual_vel) # getting veloci
 ```
 
 ## assisted mode
-With the sensor information provided by scan topic, the velocity sent from teleop node is modified depending on the relationship between a car and obstacles. The cases are divided into 6 parts: No obstacle, front,
+With the sensor information provided by scan topic, the velocity sent from teleop node is modified depending on the relationship between a car and obstacles. The cases are divided into 6 parts: No obstacle, front, front-right, front-left, right and left. 
 
 ```
         # Obstacle located in front of the car
