@@ -33,6 +33,12 @@ There are two nodes I added to the repository provided the professor: "menu" in 
 
 <img width="1388" alt="スクリーンショット 2022-02-18 16 28 46" src="https://user-images.githubusercontent.com/46062824/154717283-b54d1e93-939c-4b1c-a81b-fc4a26d259b2.png">
 
+## "menu" node
+### input
+
+### output
+
+
 # How to execute
 The program can be run in the terminal.
 <br>
