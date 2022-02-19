@@ -76,7 +76,8 @@ def fix_goal():
 
     # initializing goal coordinate given by user
     init_goal_msg = MoveBaseActionGoal()
-
+	
+    # send a goal to the robot to move to the destination
     init_goal_msg.goal.target_pose.header.frame_id = "map"
     init_goal_msg.goal.target_pose.pose.position.x = input_x
     init_goal_msg.goal.target_pose.pose.position.y = input_y
