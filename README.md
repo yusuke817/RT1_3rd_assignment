@@ -103,6 +103,20 @@ You should run the launch file including simulation_gmapping.launch, move_base.l
 $ roslaunch final_assignment final_assignment.launch
 ```
 
+# Functions
+ 1. menu_ui for users to select the mode
+ 2. check_user_input for accepting the effective user input about selecting the mode
+ 3. print_goal for outputting the goal
+ 4. set_goal for deciding the coordinate -> check the destination is reachable or not
+ 5. get_goal for storing the goal
+ 6. goal_reached for checking whether reached or not 
+ 7. cancel_goal for cancelling
+ 8. manual_driving
+ 9. assisted_driving
+ 10. set_user_vel
+ 11. choose_driving_mode
+ 12. main
+
 # The expalanation about each nodes for operation
 
 1. "driving_node" in control.cpp.
