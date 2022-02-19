@@ -29,15 +29,31 @@ The flowchart of the program is shown below.
 ![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
 
 # Overview of the implementation
-There are two nodes I added to the repository provided the professor: "menu" in menu.py and "tele_op" in teleop_twist_keyboard.py. I show you the realationships between the nodes in rqt-graph. 
+There are two nodes I added to the repository provided the professor: "menu" in menu.py and "teleop" in teleop_twist_keyboard.py. I show you the realationships between the nodes in rqt-graph. 
 
 <img width="1388" alt="スクリーンショット 2022-02-18 16 28 46" src="https://user-images.githubusercontent.com/46062824/154717283-b54d1e93-939c-4b1c-a81b-fc4a26d259b2.png">
 
 ## "menu" node
 ### input
+1. user input from menu.py screen
+There are several types of user inputs accepted to this node
+a. driving mode: "1: Auto_drive mode, 2: Manual_drive mode, 3: Assisted_drive mode, 4: Cancel the goal, 5: Reset car position, 0: Exit"
+b. goal coordinates in 1: Auto_drive mode
+c. command for going back to the menu: if you would like to finish the mode in 2: Manual_drive mode, 3: Assisted_drive mode, you should push p.
+<br>
+2. "input_cmd_vel" topic from teleop node
+In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive mode, 3: Assisted_drive mode, "menu" node receives input_cmd_vel" topic and modifies the velocity depending on the situation related to obstacles around a car.
+<br>
+3. "input_cmd_vel" topic from teleop node
+In teleop_twist_keyboard.py screen, user can
+<br>
+4. "input_cmd_vel" topic from teleop node
+In teleop_twist_keyboard.py screen, user can
 
 ### output
+1. user input from menu.py screen
 
+2. from teleop_twist_keyboard.py screen
 
 # How to execute
 The program can be run in the terminal.
