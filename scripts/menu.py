@@ -123,7 +123,7 @@ def check_goal(msg):
             rospy.sleep(1)
             
 def cancel_process():
-    # finishing the process before reaching the goal
+    # cancelling the process before reaching the goal
     global yesno_goal
     # No goal to be cancelled
     if not yesno_goal:
