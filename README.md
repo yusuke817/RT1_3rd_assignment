@@ -119,24 +119,41 @@ $ roslaunch final_assignment final_assignment.launch
  13. main: Initialization, settings about pub/sub and running
 
 # The expalanation about each driving modes
+Please read the comments in the codes, if you would like to know the details of the implementation. Here, I explain the important part briefly.
+## auto drive mode
+Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
 
-1. "driving_node" in control.cpp.
+```
+# accepting the goal coordinate user wants
+input_x = float(input('\nCould you type the x-coordinate for the goal?: '))
+input_y = float(input('\nCould you type the y-coordinate for the goal?: '))
 
-With pub-sub communications, I implemented the function of automatic driving. After running the node, the robot will drive. In this terminal, the modes and the speeds are displayed continually. There are four modes depending on the movement of the robot: straight, turn right, turn left and decrease. 
-   - Driving stragightforward without decreasing the speed when the robot doesn't detect anything in front of it. 
-   - Decreasing when the robot detects something in front of it. Also, in this case, depending on the place of the wall, the robot will decide the turning direction
-     - Turning right when the robot is close to left wall.
-     - Just decreasing when the robot is close to both left and right walls.
-     - Turning left when the robot is close to right wall.
+# initializing goal coordinate given by user
+init_goal_msg = MoveBaseActionGoal()
+	
+# send a goal to the robot to move to the destination
+init_goal_msg.goal.target_pose.header.frame_id = "map"
+init_goal_msg.goal.target_pose.pose.position.x = input_x
+init_goal_msg.goal.target_pose.pose.position.y = input_y
+init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
+```
+## auto drive mode
+Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
 
-2. "speed_server_node" in interaction.cpp
+```
+# accepting the goal coordinate user wants
+input_x = float(input('\nCould you type the x-coordinate for the goal?: '))
+input_y = float(input('\nCould you type the y-coordinate for the goal?: '))
 
-With services, I implemented the function of the change of the speeds and resetting the position. You can give the robot four kinds of commands. You can set the robot's speed from 0.0 to 5.0. You can increase or decrese the speed every 0.5 speeds. 
-<br>
-  - 'a' for increasing the speed 
-  - 'd' for increasing the speed
-  - 'r' for resetting the postion and the speed. You can move the robot into its original place anytime.
-  - 'f' for terminating the node itself. 
+# initializing goal coordinate given by user
+init_goal_msg = MoveBaseActionGoal()
+	
+# send a goal to the robot to move to the destination
+init_goal_msg.goal.target_pose.header.frame_id = "map"
+init_goal_msg.goal.target_pose.pose.position.x = input_x
+init_goal_msg.goal.target_pose.pose.position.y = input_y
+init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
+```
 
 # Result on YouTube
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
