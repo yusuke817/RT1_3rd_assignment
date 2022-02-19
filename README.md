@@ -25,8 +25,7 @@ The user menu is shown below.
 
 The flowchart of the program is shown below.
 <br>
-
-![RT1_2_flowchart](https://user-images.githubusercontent.com/46062824/146186598-33f5dcfd-0092-40b7-878b-9e562c1dd977.JPG)
+![IMG_5159](https://user-images.githubusercontent.com/46062824/154812971-f2234bfa-bd25-4c08-96e5-0a07306a552a.JPG)
 
 # Overview of the implementation
 There are two nodes I added to the repository provided the professor: "menu" in menu.py and "teleop" in teleop_twist_keyboard.py. I show you the realationships between the nodes in rqt-graph. 
