@@ -47,14 +47,12 @@ There are two nodes I added to the repository provided the professor: "menu" in 
     - c. command for going back to the menu: if you would like to finish the mode in 2: Manual_drive mode, 3: Assisted_drive mode, you should push p.
 - "input_cmd_vel" topic from teleop node: 
 In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive mode, 3: Assisted_drive mode, "menu" node receives input_cmd_vel" topic and modifies the velocity depending on the situation related to obstacles around a car.
-- "scan" topic from gazebo node:
-
-- "move_base/goal" topic from move_base node
+- "scan" topic from gazebo node: "menu" node receives the information collercted by laser scanner
+- "move_base/feedback" and "move_base/goal" topic from move_base node: "menu" node gets the feedback on the current position and the goal the car is aiming at.
 
 ### output
-1. user input from menu.py screen
-
-2. from teleop_twist_keyboard.py screen
+- "cmd_vel" topic to gazebo: publish the information on the velocity to gazebo
+- "move_base/goal" topic to move_base node: publish the information on the goal to move_base 
 
 # How to execute
 The program can be run in the terminal.
