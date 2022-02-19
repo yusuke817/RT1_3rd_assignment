@@ -104,18 +104,19 @@ $ roslaunch final_assignment final_assignment.launch
 ```
 
 # Functions
- 1. menu_ui for users to select the mode
- 2. check_user_input for accepting the effective user input about selecting the mode
- 3. print_goal for outputting the goal
- 4. set_goal for deciding the coordinate -> check the destination is reachable or not
- 5. get_goal for storing the goal
- 6. goal_reached for checking whether reached or not 
- 7. cancel_goal for cancelling
- 8. manual_driving
- 9. assisted_driving
- 10. set_user_vel
- 11. choose_driving_mode
- 12. main
+ 1. menu_ui: menu
+ 2. get_user_input: getting and checking user input and asking for another user input if it is ineffective
+ 3. display_goal: displaying the goal coordinate
+ 4. fix_goal: In Auto_drive mode, fixing the goal coordinate
+ 5. receive_goal: Goal coordinates are stored and subscribed by move_base topic
+ 6. check_goal: checking whether the goal is reachable or not and notifying arrival 
+ 7. cancel_process: cancelling the process before reaching the goal
+ 8. finish_process: finishing the process before reaching the goal
+ 9. manual_driving: with teleop_twist_keyboard, user can maneuver a car
+ 10. assisted_driving: in each step, car collects the information on the distance between a car and an object with laserscan topic and decide the speed in assisted mode
+ 11. actual_vel: with teleop_twist_keyboard, user can change the speed of a car
+ 12. choose_driving_mode: user can choose the driving mode
+ 13. main: Initialization, settings about pub/sub and running
 
 # The expalanation about each nodes for operation
 
