@@ -55,7 +55,7 @@ In teleop_twist_keyboard.py screen, user can maneuver a car. In 2: Manual_drive 
 - "move_base/goal" topic to move_base node: publish the information on the goal to move_base 
 
 ## "teleop" node
-I used "teleop_twist_keyboard" distributed by ROS org(http://wiki.ros.org/teleop_twist_keyboard). The command menu is shown below.
+I used "teleop_twist_keyboard" distributed by ROS org(http://wiki.ros.org/teleop_twist_keyboard). The command menu is shown below. This node publishes "input_cmd_vel" topic to menu node.
 <img width="345" alt="スクリーンショット 2022-02-19 14 47 53" src="https://user-images.githubusercontent.com/46062824/154803549-6dcc6808-88e2-4ed0-ae74-728987021f65.png">
 
 # How to execute
