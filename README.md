@@ -279,4 +279,8 @@ Result is shown in the video below. I recommend you that you should change the r
 [![](https://img.youtube.com/vi/mwPPHWJMLmY/0.jpg)](https://www.youtube.com/watch?v=mwPPHWJMLmY)
 
 # Future work
-In this assignment, I set the limitation of the robot since the robot will crash against the wall when the speed is too big. With PID control, the quality of control will improve and robot will drive faster than now.
+A car should 
+ 1. calculate the time of reaching the destination beforehand
+ 2. register several destinations and move consequently
+The reasons are as follows.
+Let's think about the real application. A car moves in the warehouse to carry and put items to the several shelves. In auto driving mode, a car should calculate the time of reaching the destination beforehand not only to check whether or not it is reachable but also to check the amount of consumed fuel. If fuel is not enough to head another destination, it should move back to the starting point to charge the energy. Also, a car should move to the several places until the fuel runs out, I should make a car register several destinations and move consequently. 
