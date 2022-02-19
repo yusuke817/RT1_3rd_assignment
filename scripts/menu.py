@@ -90,7 +90,7 @@ def fix_goal():
     yesno_goal = True
 
 def receive_goal(msg):
-    # these two values are subscribed by move_base topic
+    # these two values are stored and subscribed by move_base topic
     global decided_x, decided_y
     decided_x = msg.goal.target_pose.pose.position.x
     decided_y = msg.goal.target_pose.pose.position.y
