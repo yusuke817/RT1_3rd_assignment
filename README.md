@@ -119,7 +119,7 @@ $ roslaunch final_assignment final_assignment.launch
  13. main: Initialization, settings about pub/sub and running
 
 # The expalanation about each driving modes
-Please read the comments in the codes, if you would like to know the details of the implementation. Here, I explain the important part briefly.
+Please read the comments in the codes if you would like to know the details of the implementation. Here, I explain the important part briefly.
 ## auto drive mode
 Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
 
@@ -137,7 +137,7 @@ init_goal_msg.goal.target_pose.pose.position.x = input_x
 init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 ```
-## auto drive mode
+## manual mode
 Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
 
 ```
@@ -154,6 +154,23 @@ init_goal_msg.goal.target_pose.pose.position.x = input_x
 init_goal_msg.goal.target_pose.pose.position.y = input_y
 init_goal_msg.goal.target_pose.pose.orientation.w = 1.0    
 ```
+
+## assisted mode
+Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
+
+```
+# accepting the goal coordinate user wants
+input_x = float(input('\nCould you type the x-coordinate for the goal?: '))
+input_y = float(input('\nCould you type the y-coordinate for the goal?: '))
+
+# initializing goal coordinate given by user
+init_goal_msg = MoveBaseActionGoal()
+	
+# send a goal to the robot to move to the destination
+init_goal_msg.goal.target_pose.header.frame_id = "map"
+init_goal_msg.goal.target_pose.pose.position.x = input_x
+init_goal_msg.goal.target_pose.pose.position.y = input_y
+init_goal_msg.goal.target_pose.pose.orientation.w = 1.0  
 
 # Result on YouTube
 Result is shown in the video below. I recommend you that you should change the resolution into 1080p to read the characters in the terminals.
