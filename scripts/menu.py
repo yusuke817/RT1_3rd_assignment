@@ -265,7 +265,7 @@ def actual_vel(msg):
     	if not drive_assist:
     		pub_vel.publish(msg)
     		return
-    	# in assist mode, the message is rewritten
+    	# in assist mode, the velocity is stored
     	else:
     		vel_msg.linear.x = msg.linear.x
     		vel_msg.angular.z = msg.angular.z    		
