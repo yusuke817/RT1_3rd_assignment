@@ -18,7 +18,11 @@ The simulation with Rviz is shown in the right side.
 The simulation with Gazebo is shown in the right side.
 <img width="320" alt="スクリーンショット 2022-02-18 22 08 10" src="https://user-images.githubusercontent.com/46062824/154762042-a9061a43-5ea8-488f-8271-37bfe2296559.png">
 
-# Flowchart
+# Menu and Flowchart
+The user menu is shown below.
+<br>
+<img width="345" alt="スクリーンショット 2022-02-19 11 49 15" src="https://user-images.githubusercontent.com/46062824/154797760-4f3cc29e-8640-4c29-8883-e4b961a44fc7.png">
+
 The flowchart of the program is shown below.
 <br>
 
