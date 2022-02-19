@@ -151,21 +151,45 @@ sub_vel = rospy.Subscriber('/input_cmd_vel', Twist, actual_vel) # getting veloci
 ```
 
 ## assisted mode
-Navigation stack enables a car to reach the destination which user decides with collision avoidance. The main node receives goal coordinates and send them to move_base.
+With the sensor information provided by scan topic, the velocity sent from teleop node is modified depending on the relationship between a car and obstacles. The cases are divided into 6 parts: No obstacle, front,
 
 ```
-# accepting the goal coordinate user wants
-input_x = float(input('\nCould you type the x-coordinate for the goal?: '))
-input_y = float(input('\nCould you type the y-coordinate for the goal?: '))
+        # Obstacle located in front of the car
+        if parts['front'] < obj_th:
+            # cannot move forward
+            if vel_msg.linear.x > 0 and vel_msg.angular.z == 0:#i
+                # Stop car's linear velocity #k
+                vel_msg.linear.x = 0
 
-# initializing goal coordinate given by user
-init_goal_msg = MoveBaseActionGoal()
-	
-# send a goal to the robot to move to the destination
-init_goal_msg.goal.target_pose.header.frame_id = "map"
-init_goal_msg.goal.target_pose.pose.position.x = input_x
-init_goal_msg.goal.target_pose.pose.position.y = input_y
-init_goal_msg.goal.target_pose.pose.orientation.w = 1.0  
+        # Obstacle located in the front-right of the car    
+        elif parts['fright'] < obj_th:
+            # cannot move forward and can only rotate in counterclockwise direction
+            if vel_msg.linear.x > 0 and vel_msg.angular.z < 0:#o
+                # Stop car's linear velocity  #k
+                vel_msg.linear.x = 0
+                vel_msg.angular.z = 0
+
+        # Obstacle located in the front-left of the car
+        elif parts['fleft'] < obj_th: 
+            # cannot move forward and can only rotate in clockwise direction
+            if vel_msg.linear.x > 0 and vel_msg.angular.z > 0:#u
+                # Stop car's linear velocity #k
+                vel_msg.linear.x = 0
+                vel_msg.angular.z = 0
+
+        # Obstacle located in the right of the car
+        elif parts['right'] < obj_th:
+            # cannot move forward and can only rotate in counterclockwise direction
+            if vel_msg.linear.x == 0 and vel_msg.angular.z < 0:#l
+                # Stop car's angular velocity #k
+                vel_msg.angular.z = 0
+
+        # Obstacle located in the left of the car
+        elif parts['left'] < obj_th: 
+            # cannot move forward and can only rotate in clockwise direction
+            if vel_msg.linear.x == 0 and vel_msg.angular.z > 0:#j
+                # Stop car's angular velocity #k
+                vel_msg.angular.z = 0
 ```
 
 # Result on YouTube
